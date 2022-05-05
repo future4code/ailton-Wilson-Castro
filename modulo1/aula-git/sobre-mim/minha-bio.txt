@@ -1,1 +1,3 @@
-Já tinha feito a minha descrição anteriormente, mas não usei a pasta git-1, entao agora estou refazendo conforme orientado no exercício.
+Já tinha feito a minha descrição anteriormente, mas não usei a branch git-1, usei a branch projetos-labenu, entao agora estou refazendo conforme orientado no exercício.
+
+Sou Wilson, Tenho 47 anos, Formado em economia e desde 2015 estou estudando para desenvovledor.
