@@ -72,15 +72,37 @@ ${comidaPreferida[2]},
 ${comidaPreferida[3]} e
 ${comidaPreferida[4]}`);*/
 
+//Exercício 3
+//Letra A)
+/*const listaTarefas = [];
+//Letra B)  
+const ask1 = prompt("Digite uma tarefa")
+const ask2 = prompt("Digite uma segunda tarefa")
+const ask3 = prompt("Digite uma terceira tarefa")
+listaTarefas.push(ask1, ask2, ask3);
+//Letra C)
+console.log(listaTarefas);
+//Letra D)
+const realizado = Number(prompt("Digite 1 se você realizou a tarefa 1 ou 2 para a tarefa 2 ou 3 para a tarefa 3 realizada:")); 
+const realizadoCorrigido = realizado - 1;
+//Letra E)
+listaTarefas.splice(realizadoCorrigido, 1);
+//Letra F)
+console.log(listaTarefas);*/
+
+
 //**********DEAFIO**********
 
-//Exercício 1
-/*let frase = prompt("Digite uma frase");
+/*Exercício 1
+let frase = prompt("Digite uma frase");
 const novaFrase = frase.split(" ");
-console.log(novaFrase)*/
+console.log(novaFrase)
 
-//Exercício 2
-/*const frutas = ["Banana", "Morango", "Abacaxi", "Laranja", "Ameixa"];
+Exercício 2
+const frutas = ["Banana", "Morango", "Abacaxi", "Laranja", "Ameixa"];
 const indice = frutas.indexOf("Abacaxi");
 const comp = frutas.length;
-console.log("O índice de abacaxi é: " + indice + " e o array tem " + comp + " elementos");*/
+console.log("O índice de abacaxi é: " + indice + " e o array tem " + comp + " elementos");
+*/
+
+
