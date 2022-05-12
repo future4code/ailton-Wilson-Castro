@@ -105,4 +105,9 @@ const comp = frutas.length;
 console.log("O índice de abacaxi é: " + indice + " e o array tem " + comp + " elementos");
 */
 
+function minhaFuncao(variavel) {
+    return variavel * 5
+}
 
+console.log(minhaFuncao(2))
+console.log(minhaFuncao(10))
