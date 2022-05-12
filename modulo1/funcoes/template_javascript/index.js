@@ -149,4 +149,3 @@ const resultado = Math.sqrt((c1*c1) + (c2*c2))
 console.log(resultado)*/
 
 
-//Teste
