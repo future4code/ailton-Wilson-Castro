@@ -14,7 +14,7 @@ function imprimeMensagem() {
   console.log(mensagem)
 }
 
-// EXERCÍCIOS PARA FAZER ------------------------------------------------------------------t
+// EXERCÍCIOS PARA FAZER ------------------------------------------------------------------
 
 // EXERCÍCIO 01
 function calculaAreaRetangulo() {
