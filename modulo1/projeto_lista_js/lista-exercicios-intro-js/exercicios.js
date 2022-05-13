@@ -94,7 +94,7 @@ function retornaUltimoElemento(array) {
   // implemente sua lógica aqui
   return array.pop()
 }
-
+t
 // EXERCÍCIO 11
 function trocaPrimeiroEUltimo(array) {
   // implemente sua lógica aqui
