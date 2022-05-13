@@ -100,7 +100,7 @@ function trocaPrimeiroEUltimo(array) {
   // implemente sua lógica aqui
   
 }
-t
+
 // EXERCÍCIO 12
 function checaIgualdadeDesconsiderandoCase(string1, string2) {
   // implemente sua lógica aqui
