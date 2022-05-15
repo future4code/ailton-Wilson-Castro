@@ -94,17 +94,27 @@ function retornaUltimoElemento(array) {
   // implemente sua lógica aqui
   return array.pop()
 }
-t
+
 // EXERCÍCIO 11
 function trocaPrimeiroEUltimo(array) {
-  // implemente sua lógica aqui
   
+  const primeiro = array.shift()
+  const ultimo = array.pop()
+  array.unshift(ultimo)
+  array.push(primeiro)
+  
+ 
+  return array
+ 
+    
+ 
 }
 
 // EXERCÍCIO 12
 function checaIgualdadeDesconsiderandoCase(string1, string2) {
   // implemente sua lógica aqui
-  return string1.toUpperCase === string2.toUpperCase
+  
+  return string1.toUpperCase().includes(string2.toUpperCase())
 }
 
 // EXERCÍCIO 13
