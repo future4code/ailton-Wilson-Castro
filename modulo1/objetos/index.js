@@ -101,3 +101,5 @@ function objeto(parametro){
 console.log(`Eu sou ${nomeApelido.nome}, mas pode me chamar de: ${nomeApelido.apelidos[0]} ou ${nomeApelido.apelidos[1]} ou ${nomeApelido.apelidos[2]}.`)
 }
 objeto(nickname)*/
+
+Não deu pra fazer hoje o restante dos exercícios porque tive um contra-tempo de git e github que a Elaian me ajudou a resolver por boa parte da tarde e depois tive que resolver um situação familiar que me deixou desgastado. Mas vou fazer esses exercícios junto com os demais amanhã.
