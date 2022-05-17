@@ -103,3 +103,18 @@ console.log(`Eu sou ${nomeApelido.nome}, mas pode me chamar de: ${nomeApelido.ap
 objeto(nickname)*/
 
 Não deu pra fazer hoje o restante dos exercícios porque tive um contra-tempo de git e github que a Elaian me ajudou a resolver por boa parte da tarde e depois tive que resolver um situação familiar que me deixou desgastado. Mas vou fazer esses exercícios junto com os demais amanhã.
+function pessoa() {
+	const people = {
+		nome: "Fulano de tal"
+		Gênero: "m"
+	}
+	if(nome = "m"{
+		console.log()
+	}else{
+
+	}
+}
+
+console.log()
+
+"Não co nsegui fazer esse exercício, o tempo foi muito curto"
