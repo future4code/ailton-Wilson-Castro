@@ -53,9 +53,39 @@ for(var divisao of arrayOriginal){
 //Letra C)
 //Resposta
 /*const arrayOriginal = [1,2,3,4,5]
-for(var pares of arrayOriginal){
+for(let pares of arrayOriginal){
    
     if(pares % 2 === 0){
         console.log(pares)
     }
 }*/
+
+//Letra D)
+//Resposta
+
+/*const arrTexto = [1,2,3,4,5,6,7,8,9,0]
+for(let texto1 of arrTexto)
+for(let texto2 in arrTexto)
+
+  console.log("O elemento do index " + texto2 + " é " + texto1)*/
+
+//Letra E
+//Resposta
+
+function exercicioLetraE(arr) {
+    let maxNumber = 0
+    let minNumber = 10
+
+    for(let i = 0; i < arr.length; i++){
+        const num1 = arr[i]
+        if (num1 > maxNumber) {
+            maxNumber = num1
+        }
+        const num2 = arr[i]
+        if(num2 < minNumber){
+            minNumber = num2
+        }
+    }
+    console.log(`O maior número é ${maxNumber} e o menor número é ${minNumber}`)
+}
+  
