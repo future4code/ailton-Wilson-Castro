@@ -1,0 +1,172 @@
+/* **********Página Inicial********** */
+*  {
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: rgb(189, 129, 129);
+    text-align: center;
+}
+header p {
+    color: white;
+    font-weight: bold;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+
+footer {
+    background-color: rgb(189, 129, 129);
+    text-align: center;
+    margin-top: -67px;
+}
+
+footer p {
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 110px;
+}
+
+footer img {
+    width: 50px;
+    height: 50px;   
+}
+
+
+#linkedin {
+    position:relative;
+    width: 55px;
+    height: 55px;
+}
+
+.lateral_dir_sup {
+    text-transform: uppercase;
+    margin-top: -380px;
+    color: brown;
+    text-align: right;
+    margin-right: 200px;
+}
+
+.video {
+    margin-left: 760px;
+}
+.lateral_dir_inf {
+    margin-top: 50px;
+    text-align: right;
+}
+
+nav {
+    margin-top: 5px;
+}
+
+.lista_index {
+    text-transform: uppercase;
+    text-indent: 20px;
+    padding-top: 20px;
+    background-color: bisque;
+    padding-bottom: 10px;
+    margin-top: -5px;
+}
+
+.menu {
+    background-color: blueviolet;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+a {
+    color: white;
+    text-transform: uppercase;
+    margin: auto;
+    padding: 10px;
+}
+
+/* **********CONTROLE DE ESTOQUE********** */
+
+.estoque {
+    padding: 14px 0;
+}
+
+table {
+    width: 700px;
+}
+
+td {
+    border: 1px solid black;
+    text-align: center;
+}
+
+th {
+    background-color: rgb(203, 211, 136);
+}
+
+.h2_estoque {
+    margin-left: 250px;
+}
+
+/* **********ADICIONAR PRODUTOS********** */
+
+.produtos {
+    padding: 14px 0;
+}
+
+.h2_produto {
+    margin-left: 180px;
+    margin-bottom: 20px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.footer_produto {
+margin-top: 133px;
+}
+
+#link-foto {
+    padding: 10px 100px;
+    margin-left: 60px;
+    margin-bottom: 10px;
+    
+}
+
+#descricao {
+    padding: 10px 100px;
+    margin-left: 14px;
+    margin-bottom: 10px;
+}
+
+#preco {
+    padding: 10px 100px;
+    margin-left: 58px;
+    margin-bottom: 10px;
+}
+
+#qty {
+    padding: 10px 100px;
+    margin-left: 7px;
+    margin-bottom: 10px;
+}
+
+/* **********FUNCIONARIOS********** */
+.funcionarios {
+    padding: 14px 0;
+}
+
+.li_funcionarios {
+    list-style-type:disc;
+    margin-left: 20px;
+}
+
+.h2_funcionarios {
+    margin: 10px 0 10px 20px;
+}
+
+.footer_func {
+    margin-top: 298px;
+}
