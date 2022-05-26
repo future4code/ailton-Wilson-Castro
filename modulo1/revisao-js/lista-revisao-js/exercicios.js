@@ -57,20 +57,9 @@ return maiorNum
 
 // EXERCÍCIO 07
 function retornaObjetoEntreDoisNumeros(num1, num2) {
-    let array = [num1,num2]
-    let maiorNumero = 0
-  for(let i = 0; i < array.length; i++){
-    if (array[i] > maiorNumero) {
-    maiorNumero = array[i]
-} 
-}
-return (`maiorNumero: ${maiorNumero}`)
-
-        const divisao = maiorNumero / num1
-        if(divisao % 2 === 0){
-            return true
-        }
-        return false
+   if (num1 > num2) {
+       return "maiorNumero:" + num1
+   }  
     }
 
 
