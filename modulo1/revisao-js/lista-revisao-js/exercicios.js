@@ -57,38 +57,42 @@ return maiorNum
 
 // EXERCÍCIO 07
 function retornaObjetoEntreDoisNumeros(num1, num2) {
-   if (num1 > num2) {
-       return "maiorNumero:" + num1
-   }  
+    const maiorDivisivelPorMenor =  num2 / num1
+    const diferenca = num2 - num1
+    if (num2 > num1 && maiorDivisivelPorMenor % 2 === 0){
+        return "{"+"maiorNumero:" + num2 + ",maiorDivisivelPorMenor:true," + "diferenca:" + diferenca + "}"
     }
-
-
-
+}    
 
 // EXERCÍCIO 08
 function retornaNPrimeirosPares(n) {
-    for(let i = 0; primeiroPar.length < n; i++)
-    if(n % 2 === 0){
-        return n
+    let numerosPares = []
+    for (let i = 0; numerosPares.length < n; i++){
+        if(i % 2 === 0){
+            numerosPares.push(i)
+        }
     }
-}
+    return numerosPares
+    }
+
 
 // EXERCÍCIO 09
 function classificaTriangulo(ladoA, ladoB, ladoC) {
-
+   
     if(ladoA < (ladoB + ladoC) && ladoB < (ladoA + ladoC) && ladoC < (ladoA + ladoB)){
         if(ladoA == ladoB && ladoB == ladoC){
             return "Equilátero"
-        }else if(ladosA == ladoB || ladoA == ladoC || ladoC == ladoB){
-        return "Isósceles"
+        }else if(ladoA == ladoB || ladoA == ladoC || ladoC == ladoB){
+            return "Isósceles"
         }else{
-        return "Escaleno"    
-    }
-}else{
-    return "Nenhuma medida informada"
+            return "Escaleno"    
+        }   
+    }else{
+        return "Nenhuma medida informada"
 }
 }
-}
+
+
     
 
 // EXERCÍCIO 10
