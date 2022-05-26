@@ -57,12 +57,34 @@ return maiorNum
 
 // EXERCÍCIO 07
 function retornaObjetoEntreDoisNumeros(num1, num2) {
-    const maiorDivisivelPorMenor =  num2 / num1
-    const diferenca = num2 - num1
-    if (num2 > num1 && maiorDivisivelPorMenor % 2 === 0){
-        return "{"+"maiorNumero:" + num2 + ",maiorDivisivelPorMenor:true," + "diferenca:" + diferenca + "}"
-    }
-}    
+    const maiorNumero = Math.max(num1, num2)
+    const menorNumero = Math.min(num1,num2)
+    const maiorDivisivelPorMenor =  maiorNumero / menorNumero
+    const diferenca = maiorNumero - menorNumero
+    const diferenca2 = num1 - num2 
+    const diferenca3 = num2 - num1
+    if(maiorDivisivelPorMenor % 2 === 0 ){
+        return {
+            maiorNumero: maiorNumero,
+            maiorDivisivelPorMenor: true,
+            diferenca: diferenca
+}
+}else if (num1 = num2){
+    return {
+        maiorNumero: maiorNumero,
+        maiorDivisivelPorMenor: true,
+        diferenca: diferenca
+}
+}else if (maiorNumero / menorNumero % 2 === 0){
+    return {
+        maiorNumero: maiorNumero,
+        maiorDivisivelPorMenor: false,
+        diferenca: diferenca3
+}
+}else{
+    return "Erro"
+}
+}
 
 // EXERCÍCIO 08
 function retornaNPrimeirosPares(n) {
