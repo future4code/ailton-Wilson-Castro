@@ -33,9 +33,9 @@ div>p:first-child {
     display: inline;
 }
 
-div img {
-    /*background: black;*/
-}
+/*div img {
+    background: black;
+}*/
 
 .botao-amarelo {
     background-color: #ffaf43;
@@ -111,11 +111,18 @@ td button {
     color: black;
 }
 
+td button:hover {
+    background-color: #978018;
+}
+
+td button:active {
+    color: white;
+}
+
 .container-do-search {
     margin-top: 20px;
     height: 100px;
 }
-
 
 #back-button {
     background-color: white;
