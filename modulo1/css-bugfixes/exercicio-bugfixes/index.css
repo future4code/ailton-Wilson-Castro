@@ -28,6 +28,10 @@ input {
     border-bottom: 2px solid black;
 }
 
+textarea:focus, input:focus, select:focus {
+    outline: 0;
+}
+
 button:focus {
     color: white;
 }
