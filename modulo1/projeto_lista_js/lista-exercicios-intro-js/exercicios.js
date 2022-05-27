@@ -103,10 +103,7 @@ function trocaPrimeiroEUltimo(array) {
   array.unshift(ultimo)
   array.push(primeiro)
   
- 
   return array
- 
-    
  
 }
 
