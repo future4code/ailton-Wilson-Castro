@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+
+body {
+    margin: 0 15vw;
+}   
+
+#container {
+    background-color: rgb(192, 229, 229);
+    position: relative;
+    height: 1000px;
+}
+
+header {
+    background-color: rgb(194, 188, 109);
+}
+
+#img {
+    
+    margin-left: 120px;
+    display: inline;
+    
+}
+
+img {
+    margin-top: 25px;
+    width: 150px;
+    border-radius: 70px;
+    margin-bottom: 10px;
+}
+
+#cabecalho {
+    position: absolute;
+    line-height: 30px;
+    display: inline;
+    margin-left: 200px;
+    margin-top: 25px;  
+    font-size: larger;
+    
+}
+
+nav {
+    position: absolute;
+    background-color: rgb(113, 155, 190);
+    display: inline;
+    margin-top: 15px;
+    width: 350px;
+    height: 702px;
+    margin-left: 15px;
+    
+}
+
+
+ul {
+    font-size: larger;
+    margin-left: 25px;
+    line-height: 30px;
+    font-family: 'Pacifico', cursive;
+    line-height: 30px;
+}
+
+l1 {
+    
+}
+
+.paragrafo {
+    background-color: rgb(129, 167, 121);
+    display: inline;
+    float: right;
+    position: absolute;
+    width: 525px;
+    height: 150px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#paragrafo1 {
+    margin-top: 15px;
+    margin-left: 400px;
+}
+
+#paragrafo2 {
+    margin-top: 199px;
+    margin-left: 400px;
+}
+
+#paragrafo3 {
+    margin-top: 383px;
+    margin-left: 400px;
+}
+
+#paragrafo4 {
+    margin-top: 567px;
+    margin-left: 400px;
+}
+
+footer {
+    font-size: 12px;
+    background-color: rgb(39, 82, 119);
+    position: absolute;
+    bottom: 0;
+    width: 68.8vw;
+    height: 80px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    margin-left: auto;
+    color: white;
+    text-align: justify;
+    padding-left: 5px;
+    padding-right: 5px;
+    
+}
+
+.rodape {
+    height: 25px;
+    line-height: 25px;
+}
