@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    background-color: mediumvioletred;
+    padding: 20px 0;
+    
+}
+
+#icone_bolo {
+    width: 15px;
+}
+
+button {
+    padding: 0 10px;
+    margin-left: 1140px;
+    
+}
+
+main {
+    flex-grow: 1;
+}
+
+nav {
+    display: flex;
+    background-color: #f2d0e0;
+    width: 700px;
+}
+
+section {
+    display: flex;
+}
+
+.bolo {
+    width: 50px;
+}
+
+footer {
+    text-align: center;
+    background-color: mediumvioletred;
+    padding: 20px 0;
+    font-weight: bold;
+}
