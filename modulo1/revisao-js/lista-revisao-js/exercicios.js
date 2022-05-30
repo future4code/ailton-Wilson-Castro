@@ -158,8 +158,16 @@ function retornaPessoasNaoAutorizadas(pessoas) {
 
 // EXERCÍCIO 14
 function retornaContasComSaldoAtualizado(contas) {
-
-}
+    let buy = contas.map((objCliente) => {
+        for(let compra of objCliente.compras){
+            objCliente.saldoTotal = objCliente.saldoTotal - compra
+        }
+        return {...objCliente,
+        saldoTotal: objCliente.saldoTotal,
+        compras: []}
+    })
+       return buy
+    }
 
 // EXERCÍCIO 15A
 function retornaArrayOrdenadoAlfabeticamente(consultas) {
