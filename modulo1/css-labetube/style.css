@@ -6,7 +6,7 @@
 
 .container {
     display: grid;
-    grid-template-rows: 10vh 80vh 10vh;
+    grid-template-rows: 10vh 100% 10vh;
     grid-template-columns: repeat(4, 1fr);
 }
 
@@ -60,6 +60,7 @@ section {
 }
 
 footer {
+    
     background-color: rgb(50,59,62);
     grid-column: 1 / -1;
     color: white;
