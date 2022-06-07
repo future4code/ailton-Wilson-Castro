@@ -3,6 +3,10 @@ import './App.css';
 import CardGrande from './components/CardGrande/CardGrande';
 import ImagemButton from './components/ImagemButton/ImagemButton';
 import knauf from './imagens/knauf.jpeg'
+import CardPequeno from './components/CardPequeno/CardPequeno';
+import email from './imagens/email.png';
+import casa from './imagens/home.png'
+import seta from './imagens/seta.png'
 
 
 function App() {
@@ -17,8 +21,24 @@ function App() {
         />
         
         <ImagemButton 
-          imagem="https://image.flaticon.cm/icons/png/512/117/117472.png" 
+          imagem={seta} 
           texto="Ver mais"
+        />
+      </div>
+
+      <div className="page-section-container">
+        <CardPequeno 
+          imagem={email}
+          descricao="E-mail:&nbsp;"
+          texto="wilson@teste.com"
+        />
+      </div>
+
+      <div className="page-section-container">
+        <CardPequeno 
+          imagem={casa}
+          descricao="Endereço:&nbsp;"
+          texto="Rua Veneza, 200 - Flores"
         />
       </div>
 
@@ -27,7 +47,7 @@ function App() {
         <CardGrande 
           imagem="https://s3.amazonaws.com/future4.com.br/static/headf4-c492117ca2373dc85ca81bf715b3dc2a.png" 
           nome="Labenu" 
-          descricao="Formando desenvolvedores para o mercado de trabalho!" 
+          descricao="Estudando para desenvolvedor full-stack" 
         />
         
         <CardGrande 
