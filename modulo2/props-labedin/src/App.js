@@ -7,13 +7,18 @@ import CardPequeno from './components/CardPequeno/CardPequeno';
 import email from './imagens/email.png';
 import casa from './imagens/home.png'
 import seta from './imagens/seta.png'
+import styled from 'styled-components'
 
+//styled-components
+const TituloDestaque = styled.h2 `
+  color: blue;
+`
 
 function App() {
   return (
     <div className="App">
       <div className="page-section-container">
-        <h2>Dados pessoais</h2>
+        <TituloDestaque>Dados pessoais</TituloDestaque>
         <CardGrande 
           imagem="https://uploads-ssl.webflow.com/5d640f4558306be99cf47a0e/5dd57846babb597b77c6bb1d_PerfilFuture4_cor.png" 
           nome="Wilson Castro" 
@@ -43,7 +48,7 @@ function App() {
       </div>
 
       <div className="page-section-container">
-        <h2>Experiências profissionais</h2>
+        <TituloDestaque>Experiências profissionais</TituloDestaque>
         <CardGrande 
           imagem="https://s3.amazonaws.com/future4.com.br/static/headf4-c492117ca2373dc85ca81bf715b3dc2a.png" 
           nome="Labenu" 
@@ -58,7 +63,7 @@ function App() {
       </div>
 
       <div className="page-section-container">
-        <h2>Minhas redes sociais</h2>
+        <TituloDestaque>Minhas redes sociais</TituloDestaque>
         <ImagemButton 
           imagem="https://d2v9ipibika81v.cloudfront.net/uploads/sites/261/2017/01/facebook-logo-3.png" 
           texto="Facebook" 
