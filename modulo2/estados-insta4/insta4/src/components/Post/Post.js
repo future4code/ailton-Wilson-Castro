@@ -37,6 +37,7 @@ const UserPhoto = styled.img`
 const PostPhoto = styled.img`
   width: 100%;
 `
+/*6 - Essas 4 propriedades são utilizadas para alterar o estado na tela das curtidas e dos comentários chamaod depois de render(), bem como dos cliques nos respectivos ícones, chamado nas funções auxiliares*/
 
 class Post extends React.Component {
   state = {
@@ -46,16 +47,34 @@ class Post extends React.Component {
     numeroComentarios: 0
   }
 
+/*8 - A função auxiliar abaixo está sendo manifestada no console do navegador, cada vez que clicamos nela aparece a contagem no console*/
+
   onClickCurtida = () => {
+    const valorAtual = this.state.curtido
+    const proxValor = true
+    this.setState({curtido: proxValor})
+
+    const contCurtida = this.state.numeroCurtidas
+    const proxCurtida = contCurtida + 1 
+    this.setState({numeroCurtidas: proxCurtida})
+
     console.log('Curtiu!')
   }
+
+  onClickCurtidaSubtrai = () => {
+    this.setState({numeroCurtidas: this.state.numeroCurtidas - 1})
+  }
+
+/*9 - A função auxiliar abaixo é usada para abrir o input de comentários e ao clicar no button enviar, o contador inicia a contagem de quantos comentariso foram feitos*/
+
+/*10 - O botão enviar é somente para contar os cliques no botão "enviar", não está sendo considerado os comentários porque o setState par comentários não está habilitado e na propriedade comentado está setado como false */
 
   onClickComentario = () => {
     this.setState({
       comentando: !this.state.comentando
     })
   }
-
+/* 11 - Não está sendo enviado os comentários, nem mesmo pode-se escrever nada dentro do input, o motivo é que não está setado o setState para o value dos comentários. */
   aoEnviarComentario = () => {
     this.setState({
       comentando: false,
@@ -78,41 +97,50 @@ class Post extends React.Component {
       componenteComentario = <SecaoComentario aoEnviar={this.aoEnviarComentario}/>
     }
 
-    return <PostContainer>
-      <PostHeader>
-        <UserPhoto src={this.props.fotoUsuario} alt={'Imagem do usuario'}/>
-        <p>{this.props.nomeUsuario}</p>
-      </PostHeader>
+    return (
 
-      <PostPhoto src={this.props.fotoPost} alt={'Imagem do post'}/>
+      <PostContainer>
 
-      <PostFooter>
-        {/*Explicando os valores abaixo:
-          O 'icone' chama o icone de curtida através da props iconeCurtida
-          O onClickIcone é uma props que designa o estado do ícone, curtido ou não curtido
-          O valorContador é uma props que invoca o número de cliques no icone curtida
+        {/* **********Card1********** */}
+
+        <PostHeader>
+          <UserPhoto src={this.props.fotoUsuario} alt={'Imagem do usuario'}/>
+          <p>{this.props.nomeUsuario}</p>
+        </PostHeader>
+
+        <PostPhoto src={this.props.fotoPost} alt={'Imagem do post'}/>
+
+        <PostFooter>
+          {/*3 - Explicando os valores abaixo:
+            O 'icone' chama o icone de curtida através da props iconeCurtida
+            O onClickIcone é uma props que designa o estado do ícone, curtido ou não curtido
+            O valorContador é uma props que invoca o número de cliques no icone curtida
+          */}
+
+          <IconeComContador
+            valorContador={this.state.numeroCurtidas}
+            icone={iconeCurtida}
+            onClickIcone={this.onClickCurtida}
+            onClickIcone2={this.onClickCurtidaSubtrai}
+          />
+
+          {/*3 - Explicando os valores abaixo:
+            O 'icone' chama o ícone de comentário através da props iconeComentario
+            O onclickIcone é uma props que abre um campo para inserir comentários
+            O valorContador é uma props que invoca o número de comentários ao lado do ícone comentários
         */}
 
-        <IconeComContador
-          icone={iconeCurtida}
-          onClickIcone={this.onClickCurtida}
-          valorContador={this.state.numeroCurtidas}
-        />
+          <IconeComContador
+            icone={iconeComentario}
+            onClickIcone={this.onClickComentario}
+            valorContador={this.state.numeroComentarios}
+          />
+        </PostFooter>
+        {componenteComentario}
 
-        {/*Explicando os valores abaixo:
-          O 'icone' chama o ícone de comentário através da props iconeComentario
-          O onclickIcone é uma props que abre um campo para inserir comentários
-          O valorContador é uma props que invoca o número de comentários ao lado do ícone comentários
-      */}
-
-        <IconeComContador
-          icone={iconeComentario}
-          onClickIcone={this.onClickComentario}
-          valorContador={this.state.numeroComentarios}
-        />
-      </PostFooter>
-      {componenteComentario}
-    </PostContainer>
+      </PostContainer>
+    
+    )
   }
 }
 

@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 {/*
-	Explicando esse componente, ele é reponsável pela estilizacao e configuração dos ícones do post.
+	5 - Explicando esse componente, ele é reponsável pela estilização e configuração das props dos ícones do post.
 */}
 
 const IconContainer = styled.div`
