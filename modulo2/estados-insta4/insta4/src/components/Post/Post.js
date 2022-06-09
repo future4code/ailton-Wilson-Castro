@@ -54,9 +54,18 @@ class Post extends React.Component {
     const proxValor = true
     this.setState({curtido: proxValor})
 
-    const contCurtida = this.state.numeroCurtidas
-    const proxCurtida = contCurtida + 1 
-    this.setState({numeroCurtidas: proxCurtida})
+    this.setState({numeroCurtidas: this.state.numeroCurtidas})
+
+    if(this.state.numeroCurtidas){
+      this.setState({
+        numeroCurtidas: this.state.numeroCurtidas -1
+      })
+    }else{
+      this.setState({
+        numeroCurtidas: this.state.numeroCurtidas + 1
+      })
+    }
+
 
     console.log('Curtiu!')
   }
@@ -121,7 +130,7 @@ class Post extends React.Component {
             valorContador={this.state.numeroCurtidas}
             icone={iconeCurtida}
             onClickIcone={this.onClickCurtida}
-            onClickIcone2={this.onClickCurtidaSubtrai}
+            
           />
 
           {/*3 - Explicando os valores abaixo:
