@@ -50,6 +50,7 @@ class Post extends React.Component {
 /*8 - A função auxiliar abaixo está sendo manifestada no console do navegador, cada vez que clicamos nela aparece a contagem no console*/
 
   onClickCurtida = () => {
+    
     const valorAtual = this.state.curtido
     const proxValor = true
     this.setState({curtido: proxValor})
@@ -68,10 +69,6 @@ class Post extends React.Component {
 
 
     console.log('Curtiu!')
-  }
-
-  onClickCurtidaSubtrai = () => {
-    this.setState({numeroCurtidas: this.state.numeroCurtidas - 1})
   }
 
 /*9 - A função auxiliar abaixo é usada para abrir o input de comentários e ao clicar no button enviar, o contador inicia a contagem de quantos comentariso foram feitos*/
