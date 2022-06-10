@@ -51,9 +51,19 @@ class Post extends React.Component {
 
   onClickCurtida = () => {
     
-    const valorAtual = this.state.curtido
-    const proxValor = true
-    this.setState({curtido: proxValor})
+    this.setState({curtido: this.state.curtido})
+
+    if(this.state.curtido){
+      this.setState({
+        curtido: this.state.curtido = false
+      })
+    }else{
+      this.setState({
+        curtido: this.state.curtido = true
+      })
+    }
+
+    
 
     this.setState({numeroCurtidas: this.state.numeroCurtidas})
 
