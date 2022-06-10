@@ -45,6 +45,7 @@ class Post extends React.Component {
     numeroCurtidas: 0,
     comentando: false,
     numeroComentarios: 0
+    
   }
 
 /*8 - A função auxiliar abaixo está sendo manifestada no console do navegador, cada vez que clicamos nela aparece a contagem no console*/
@@ -89,6 +90,8 @@ class Post extends React.Component {
     this.setState({
       comentando: !this.state.comentando
     })
+
+    console.log('comentando')
   }
 /* 11 - Não está sendo enviado os comentários, nem mesmo pode-se escrever nada dentro do input, o motivo é que não está setado o setState para o value dos comentários. */
   aoEnviarComentario = () => {
