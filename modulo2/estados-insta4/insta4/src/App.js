@@ -17,7 +17,7 @@ const PostContainer = styled.div`
 `
 
 const Button = styled.button`
-  height: 37px;
+  height: 38px;
   width: 100px;
   display: flex;
   margin: 43px 0 0 5px;
