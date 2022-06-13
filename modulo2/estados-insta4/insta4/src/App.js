@@ -33,23 +33,21 @@ class App extends React.Component {
 
   render() {
 
-    const listaDeComponentes = this.state.pessoas.map((item, index) => {
+    const listaDeComponentes = this.state.pessoas.map((item) => {
       return (
-        <MainContainer key={index}>
-          <Post
-          {...item.nomeUsuario}
-          {...item.fotoUsuario}
-          {...item.fotoPost}
-          />
-        </MainContainer>
+        <Post
+          nomeUsuario={item.nomeUsuario}
+          fotoUsuario={item.fotoUsuario}
+          fotoPost={item.fotoPost}
+        />
       )
     })
 
     return (
       
-      <div>
+      <MainContainer>
         {listaDeComponentes}
-      </div>
+      </MainContainer>
 
     );
   }
