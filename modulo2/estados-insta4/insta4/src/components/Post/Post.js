@@ -45,7 +45,6 @@ class Post extends React.Component {
     numeroCurtidas: 0,
     comentando: false,
     numeroComentarios: 0
-    
   }
 
 /*8 - A função auxiliar abaixo está sendo manifestada no console do navegador, cada vez que clicamos nela aparece a contagem no console*/
@@ -120,7 +119,7 @@ class Post extends React.Component {
 
       <PostContainer>
 
-        {/* **********Card1********** */}
+        
 
         <PostHeader>
           <UserPhoto src={this.props.fotoUsuario} alt={'Imagem do usuario'}/>
