@@ -8,6 +8,20 @@ const MainContainer = styled.div`
   flex-direction: column;
   align-items: center;
 `
+const PostContainer = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 20px;
+`
+
+const Button = styled.button`
+  height: 37px;
+  width: 100px;
+  display: flex;
+  margin: 43px 0 0 5px;
+`
 
 class App extends React.Component {
 
@@ -20,16 +34,47 @@ class App extends React.Component {
       },
       {
       nomeUsuario: 'wilsinho',
-      fotoUsuario: 'https://picsum.photos/id/0/200/150',
+      fotoUsuario: 'https://picsum.photos/id/0/50/150',
       fotoPost:'https://picsum.photos/id/1/200/150'
       },
       {
       nomeUsuario: 'rannyzinha',
       fotoUsuario: 'https://picsum.photos/seed/picsum/50/50',
       fotoPost: 'https://picsum.photos/id/100/200/150'
-    }
-    ]
-  }
+      }
+    ],
+
+    inputNome:"",
+    inputFotoUser:"",
+    inputFotoPost:""
+
+  };
+
+    adicionaPessoa = () => {
+      const newPessoa = {
+        nomeUsuario: this.state.inputNome,
+        fotoUsuario: this.state.inputFotoUser,
+        fotoPost: this.state.inputFotoPost
+      };
+      const novaPessoa = [...this.state.pessoas, newPessoa];
+
+      this.setState({ pessoas: novaPessoa });
+      this.setState({ inputNome: "" });
+      this.setState({ inputFotoUser: "" });
+      this.setState({ inputFotoPost: "" });
+    };
+
+      onChangeInputNome = (event) => {  
+        this.setState({inputNome: event.target.value});
+      };
+
+      onChangeInputFotoUser = (event) => {
+        this.setState({inputFotoUser: event.target.value})
+      };
+
+      onChangeInputFotoPost = (event) => {
+        this.setState({inputFotoPost: event.target.value});
+      };
 
   render() {
 
@@ -40,15 +85,42 @@ class App extends React.Component {
           fotoUsuario={item.fotoUsuario}
           fotoPost={item.fotoPost}
         />
-      )
-    })
+      );
+    });
 
     return (
-      
-      <MainContainer>
-        {listaDeComponentes}
-      </MainContainer>
 
+      <MainContainer>
+        <PostContainer>
+            <div>
+              <input
+              value={this.state.inputNome}
+              onChange={this.onChangeInputNome}
+              placeholder={"Nome"}
+              />
+            </div>
+            <div>
+              <input
+              value={this.state.inputFotoUser}
+              onChange={this.onChangeInputFotoUser}
+              placeholder={"Foto Usuário"}
+              />
+            </div>
+            <div>
+              <input
+              value={this.state.inputFotoPost}
+              onChange={this.onChangeInputFotoPost}
+              placeholder={"Foto Post"}
+              />
+            </div>
+
+            <button onClick={this.adicionaPessoa}>Adicionar</button>
+        </PostContainer>
+        
+          <div>
+            {listaDeComponentes}
+          </div>
+      </MainContainer>
     );
   }
 }
