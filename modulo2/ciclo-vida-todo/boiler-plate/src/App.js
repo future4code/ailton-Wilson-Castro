@@ -48,15 +48,15 @@ class App extends React.Component {
   }
 
   criaTarefa = () => {
-    const novaTask = [...this.state.tarefas]
     const novaTarefa = {
-      identidade: Date.now(),
-      text: this.state.inputValue,
-      filtro: this.state.false,
+      id: Date.now(),
+      texto: this.state.inputValue,
+      completa: false
     }
+    const novaTask = [...this.state.tarefas, novaTarefa]
+    
     
     this.setState({tarefas: novaTask})
-    novaTask.push(novaTarefa)
   }
 
   selectTarefa = (id) => {
@@ -83,7 +83,7 @@ class App extends React.Component {
       <div className="App">
         <h1>Lista de tarefas</h1>
         <InputsContainer>
-          <input placeholder={'identidade'} value={this.state.inputValue} onChange={this.onChangeInput}/>
+          <input type='text' placeholder={'identidade'} value={this.state.inputValue} onChange={this.onChangeInput}/>
           <button onClick={this.criaTarefa}>Adicionar</button>
         </InputsContainer>
         <br/>
