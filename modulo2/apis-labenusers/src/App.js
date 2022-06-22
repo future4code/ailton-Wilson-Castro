@@ -14,10 +14,13 @@ const Principal = styled.div`
 export default class App extends Component {
 
   state = {
-    usuarios:[]
+    usuarios:[],
+    inputName: "",
+    inputEmail: ""
   }
 
-  users = axios.get("https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users", {
+  componentDidMount(){
+    axios.get("https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users", {
       headers: {
         Authorization: "wilson-castro-ailton"
       }
@@ -27,10 +30,41 @@ export default class App extends Component {
     }).catch((error) => {
       console.log(error.message)
     })
+  }
 
+  onChangeInputName = (event) => {
+    this.setState({inputName: event.target.value})
+  }
+
+  onChangeInputEmail = (event) => {
+    this.setState({inputEmail: event.target.value})
+  }
+
+  criaUsuario = () => {
+
+    const body = {
+      name: this.state.inputName,
+      email: this.state.inputEmail
+  }
+
+  const users = axios.post("https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users", body, {
+    headers: {
+      Authorization: "wilson-castro-ailton"
+    }
+  })
+  
+  users.then((response) => {
+    console.log(response)
+  }).catch((error) => {
+    console.log(error)
+  })
+}
   
   render() {
 
+    const nomeUsuarios = this.state.usuarios.map((user) => {
+      return <p>{user.name}</p>
+    })
 
 
     /* **********Apagando usuário********** */
@@ -82,11 +116,15 @@ export default class App extends Component {
 
     return (
       <Principal>
-        <Button texto={'Troca de Tela'}/>
-        <Input texto1={'Nome'}/>
-        <Input texto1={'E-mail'}/>
-        <Button texto={'Criar Usuário'}/>
+        <button>Troca de Tela</button>
+        <input value={this.state.inputName} onChange={this.onChangeInputName}/>
+        <input value={this.state.inputEmail} onChange={this.onChangeInputEmail}/>
+        <button onClick={this.criaUsuario}> Criar Usuário</button>
+        <div>
+          {nomeUsuarios}
+        </div>
       </Principal>
+
     )
   }
 }
