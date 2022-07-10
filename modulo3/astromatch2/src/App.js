@@ -1,31 +1,27 @@
-import React, { Component } from 'react'
-import Header from './components/Header/Header'
-import HomePage from './pages/HomePage/HomePage'
-import MatchPage from './pages/MatchPage/MatchPage'
+import React from 'react';
+import {useState} from 'react';
+import styled from 'styled-components';
+import axios from 'axios';
+import { createGlobalStyle } from "styled-components";
+import MainArea from './Components/mainArea';
 
-export default class App extends Component {
-
-state = {
-  currentPage: "home"
-}
-
-choosePage = () => {
-  switch(this.state.currentPage){
-    case "home":
-      return <HomePage/>
-    case "match":
-      return <MatchPage/>
-    default:
-      return <HomePage/>
+const GlobalStyle = createGlobalStyle`
+  *{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
   }
+`;
+
+
+const App = () => {
+  return (
+    <div>
+      <GlobalStyle />
+      <MainArea />
+    </div>
+  );
 }
 
-  render() {
-    return (
-      <div>
-        <Header/>
-        {this.choosePage()}
-      </div>
-    )
-  }
-}
+export default App; 
